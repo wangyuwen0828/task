@@ -7,6 +7,6 @@ package com.gupaoedu.factory.abstractFactory;
 public class PythonCourseVideo implements ICourseVideo {
     @Override
     public void record() {
-        System.out.println("录制Python视频");
+        System.out.println("录制Python视频11");
     }
 }
