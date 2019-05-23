@@ -1,0 +1,20 @@
+package com.gupaoedu.singleton.ThreadLocal;
+
+/**
+ * 2019/5/22
+ * wangyuwen
+ */
+public class ThreadLocalSingleton {
+    private static final ThreadLocal<ThreadLocalSingleton> threadLocalInstance =
+            new ThreadLocal<ThreadLocalSingleton>(){
+                @Override
+                protected ThreadLocalSingleton initialValue(){
+                    return new ThreadLocalSingleton();
+                }
+            };
+    private ThreadLocalSingleton(){}
+
+    public static ThreadLocalSingleton getInstance(){
+        return threadLocalInstance.get();
+    }
+}
